@@ -29,15 +29,6 @@ pipeline {
 	     sh "docker run -d -p 8086:8080 --name springbootapp palwalun/springbootapp:latest"
 		 }
 	   }	
-	 stage('Login2Dockerhub')  {
-	 steps{
-	  sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
-	  }
-	 }
-	 stage('Publish-to-docker-registry'){
-	 steps{
-	    sh 'docker push palwalun/springbootapp:latest'
-		}
-	}
+	 
   }
 }

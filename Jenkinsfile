@@ -30,7 +30,7 @@ pipeline {
 	     sh "docker run -it -p 8086:8080 --name springbootapp palwalun/springbootapp:latest"
 		 }
 	   }	
-	 stage('Login2Dockerhub'){
+	 stage('Login2Dockerhub')  {
 	 steps{
 	  sh 'echo $DOCKERHUB_CREDENTIAL_PSW | docker login -u $DOCKERHUB_CREDENTIAL_USR --password-stdin
 	  }

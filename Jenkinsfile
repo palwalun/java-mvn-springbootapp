@@ -19,8 +19,7 @@ pipeline {
 		steps{
 		sh """
 		
-		  docker build -t palwalun/java-mvn-springbootapp:v1.1 . 
-		  docker tag palwalun/java-mvn-springbootapp:v1.1 palwalun/springbootapp:latest
+		  docker build -t palwalun/springbootapp:latest .
 		
 		"""
 		}

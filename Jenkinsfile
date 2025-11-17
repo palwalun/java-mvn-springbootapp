@@ -27,7 +27,7 @@ pipeline {
 	}
       stage('Run_Container') {
 	  steps{
-	     sh "docker run -it -p 8086:8080 --name springbootapp palwalun/springbootapp:latest"
+	     sh "docker run -d -p 8086:8080 --name springbootapp palwalun/springbootapp:latest"
 		 }
 	   }	
 	 stage('Login2Dockerhub')  {
